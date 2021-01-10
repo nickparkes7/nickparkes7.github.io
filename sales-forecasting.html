@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio - v1.5.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/classypic_square.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Nicholas Parkes</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://www.facebook.com/nick.parkes.5055/" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/nick_parkes/" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/nicholas-parkes-861872153/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="index.html#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="index.html#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="index.html#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Sales Forecasting</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Sales Forecasting</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="portfolio-description">
+          <h2>Predicting Retail Sales Data (Python ML) </h2>
+          <p>
+            This project was done with a team of three students for the 
+            machine learning course CIS 519. We set out to tackle the Kaggle M5 forecasting challenge described <a href="https://www.kaggle.com/c/m5-forecasting-accuracy">here</a>. 
+            Our goal was to create a computational method to accurately predict sales of Walmart goods based on historical data. 
+          </p>
+          <p>
+            <b>Overview</b> <br>
+            In this project, we evaluate and compare various ML, DL, and Bayesian learning approaches to forecast item-level sales data for Walmart's products. 
+            The problem of time-series prediction is common across a multitude of domains but is particularly important for retailers, so they can prepare appropriate 
+            inventory and staffing levels.
+            There have been many studies evaluating classic statistical techniques for time-series problems such as Exponential Smoothing (ETS) and 
+            Autoregressive Integrated Moving Average, but far fewer studies use Decision Tree Models, NBD Regression, and Long Short Term Memory Recurrent Neural Networks 
+            (LSTM-RNNs). We make single step predictions and compare the quality of these predictions on basis of RMSE over a 657 day test period.
+          </p>
+          <p>
+            <b>Probability Model</b> <br>
+            Uncertainty distributions offer a unique way to explore data that are worth comparing against the results of our machine learning algorithms. 
+            The model we use is the Negbin II, which takes probabilities from a gamma mixture of poissons with covariates. This model yielded a test RMSE of 1.68. 
+            The results are shown below:
+          </p>
+          <img src="assets/img/portfolio/sales_negbin2.png" alt="" width="700">
+          <p> </p>
+          <p>
+            <b>Decision Tree Models</b> <br>
+            As a foundation for our foray into machine learning models, we explore one of the simpler types of models in the space - decision trees. 
+            To benchmark, we build a simple decision stump and tree. Then we examine a random forest and a boosted tree. By passing in the features we have 
+            compiled during our feature engineering step, we can learn regressors which hopefully forecast our data reasonably well. The results for the decision 
+            stump and tree are, as expected, fairly inaccurate. The stump simply makes a choice between sales of zero or the mean, while the tree is more nuanced 
+            but still extrapolates poorly to test data. Next we try a random forest and a boosted tree. In order to decide the optimal tree depth for our Adaboost 
+            algorithm, we can examine a plot of training vs validation errors as the tree depth is increased.
+          </p>
+          <img src="assets/img/portfolio/sales_trees_depth.png" alt="">
+          <p> </p>
+          <p>
+            The validation error appears to decrease up to a depth of around 4, then remain constant for Adaboost (and increase for a simple tree). 
+            So we use a max depth of 4 for both our tree and Adaboost algorithms.
+            Below is the combined performance of the two final tree models on the validation set. As can be seen below, both models seem to systematically 
+            overpredict sales as a result of higher values in the training set. Both also have test RMSE values of approximatly 1.90. 
+          <p> </p>
+          <img src="assets/img/portfolio/sales_trees.png" alt="" width="700">
+          <p> </p>
+          </p>
+          <p>
+            <b>LSTM Neural Network</b> <br>
+            We were able to capture the temporal component of our regression using the RF with feature engineering, but Recurrent Neural Networks are perhaps 
+            suited better for a time series task as they inherently preserve sequential dependencies. RNN's and specifically LSTM’s were popularized for their 
+            success on text-to-speech data, but we can adapt our model to work for our task. Specifically, we use the Many-to-One variant which means 
+            that many time steps are used to compute a single value. To construct our data for input to the LSTM we used a shifted sliding window. 
+            That is, we constructed samples such that the factors for a day's value consisted of the 28 days prior. This test RMSE value was 1.78. 
+          </p>
+          <p> </p>
+          <img src="assets/img/portfolio/sales_lstm.png" alt="" width="700">
+          <p> </p>
+          <p>
+            By adding a greater number of features into our network (and increasing the complexity of our model) we were able to make our LSTM network more accurate. 
+            We added 1-day and 1-week lags in addition to categorical embeddings. These embeddings consisted of variables like day-of-week, month, and year. With these 
+            improvements, we were able to bring the test RMSE of our LSTM model down to 1.63.
+          </p>
+          <p> </p>
+          <img src="assets/img/portfolio/sales_lstm_embed.png" alt="" width="700">
+          <p> </p>
+          <p>
+            <b>Model Comparisons</b> <br>
+            As the simplest and most intuitive benchmark, using a naive approach of taking the previous day's sales to forecast the current day's sales yields an 
+            RMSE of 2.39. For the purpose of our managerial end goal, this is what we want to beat. Purely on the basis of out-of-sample RMSE, we see the LSTM is our 
+            best performing model, with a huge improvement over the 1 day lag approach. However, it is complex and takes time to train, especially if extrapolated to a 
+            larger data set. The probability model has strong out-of-sample fit and scales much more efficiently to larger sets of data. The random forest model is a 
+            significant improvement over a naive approach, but is not nearly as accurate as either of the other models. The optimal model to use will depend on the 
+            situation and specific application.
+          </p>
+        </div>        
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

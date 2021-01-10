@@ -45,25 +45,21 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
+        <img src="assets/img/classypic_square.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Nicholas Parkes</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.facebook.com/nick.parkes.5055/" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/nick_parkes/" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/nicholas-parkes-861872153/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
 
       <nav class="nav-menu">
         <ul>
           <li><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li class="active"><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
-          <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
-          <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+          <li><a href="index.html#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="index.html#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="index.html#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -79,10 +75,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfoio Details</h2>
+          <h2>Mini Minecraft</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Portfoio Details</li>
+            <li>Mini Minecraft</li>
           </ol>
         </div>
 
@@ -93,15 +89,7 @@
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
 
-        <div class="portfolio-details-container">
-
-          <div class="owl-carousel portfolio-details-carousel">
-            <img src="assets/img/portfolio-details-1.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio-details-2.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio-details-3.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="portfolio-info">
+          <!-- <div class="portfolio-info">
             <h3>Project information</h3>
             <ul>
               <li><strong>Category</strong>: Web design</li>
@@ -109,37 +97,55 @@
               <li><strong>Project date</strong>: 01 March, 2020</li>
               <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
             </ul>
-          </div>
-
-        </div>
+          </div> -->
 
         <div class="portfolio-description">
-          <h2>This is an example of portfolio detail</h2>
+          <h2>Recreation of Minecraft with C++ and OpenGL </h2>
           <p>
-            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+            This project was done with a team of three students for the 
+            computer graphics course CIS 560. I was responsible 
+            for rendering, texturing, terrain generation, animation, 
+            and "Redstone" systems.
+          </p>
+          <p>
+            <b>Rendering</b> <br>
+            Block rendering was done using an OpenGL Lambert shading scheme. 
+            Positions, image textures, and normals of each block face to be rendered were compiled into an interleaved VBO (vertex buffer object) and sent to the shader on the GPU.
+            Implemented an algorithm to make this process more efficient by dividing terrain into "chunks" of 16 x 256 x 16 blocks and only rendering visible faces on outside edges of chunks.
+          </p>
+          <p>
+            <b>Texturing</b> <br>
+            In order to render blocks with proper visual imagery, I took images from a minecraft texture atlas (i.e. grass, stone, water) and passed corresponding texture uv coordinates to the shader.
+          </p>
+          <p>
+            <b>Terrain Generation</b> <br>
+            We did not want memory to be overloaded with storing the entire generated terrain, so I implemented an algorithm to only generate terrain chunks when the player was proximate. Chunks that were far away from the players position were correspondingly removed from memory.
+          </p>
+          <p>
+            <b>Animation</b> <br>
+            Water and Lava blocks were animated through an algorithm which quickly cycled through multiple image textures over time.
+          </p>
+          <p>
+            <b>Redstone Systems</b> <br>
+            Redstone in Minecraft is analagous to electricity. Redstone systems contain three components: switches, wire, and torches. 
+            If wire connects a torch to a switch which is turned on, the torch will light up. After creating in-game objects for each of these three components, I added functionality that let a player place these items at will and a backend which kept track of item placement with a graph data structure.
+            Torches were determined to be connected to switches if a depth-first search of the connectivity graph yielded a path.
           </p>
         </div>
+
+        <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/Sf_5HIocDTs" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+
+        
 
       </div>
     </section><!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
