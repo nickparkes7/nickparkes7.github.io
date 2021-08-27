@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
+  <title>Portfolio Details</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -102,33 +102,33 @@
           </p>
           <p>
             <b>The Problem and Need</b> <br>
-            Science fiction authors and technology enthusiasts have long dreamed of a fully-immersive virtual world where senses like sight and touch are so realistic 
+            Science fiction authors and technology enthusiasts have long dreamed of a fully immersive virtual world where senses like sight and touch are so realistic 
             that users cannot differentiate feeling from reality. Modern virtual reality headsets realistically trick our sense of sight to perceive virtual worlds. 
             However, gloves aiming to replicate touch lag far behind. Problems with currently available haptic gloves include weight, size, cost, and immersiveness. 
             Most designs use large and heavy servo motors that tug at your fingers and cost upwards of $10,000 without adequately replicating touch or requiring you to 
             fix your arms in place. A significant amount of research and development into haptics stems from the gaming industry, where use cases are dynamic and 
             intense, but the stakes for accuracy are low compared to other industries like remote surgery. This makes the gaming industry the perfect sandbox to 
-            explore alternative designs to improve haptic gloves. We are building a haptic glove with a unique blend of vibration motors and electrostatic brakes 
-            that is sleeker, lighter, cheaper, and more immersive for gamers.          
+            explore alternative designs to improve haptic gloves. In this project, we built a haptic glove with a unique blend of vibration motors and electrostatic brakes 
+            that was sleeker, lighter, cheaper, and more immersive for gamers.          
           </p>
           <p>
             <b>Value Proposition</b> <br>
-            Our haptic design leverages two key technologies that collectively capture all forms of haptic feedback necessary for a robust and immersive haptic system. 
-            Primarily, we implement tiny vibration motors across the hand that are connected to a microcontroller and vibrate in short bursts when touch is initiated 
-            to deliver low latency feedback. Secondly, we implement an electrostatic brake using thin metal plates across the hand that clamp together when a voltage 
-            is applied. These metal plates restrict the hand from closing completely when grabbing objects in the virtual world, similar to how an object you grab in 
-            the real world applies a force back on your hand keeping your hand from closing completely. These two technologies combined allow us to deliver realistic 
+            Our haptic design leveraged two key technologies that collectively captured all forms of haptic feedback necessary for a robust and immersive haptic system. 
+            Primarily, we implemented tiny vibration motors across the hand that were connected to a microcontroller and vibrated in short bursts when touch was initiated 
+            to deliver low latency feedback. Secondly, we implemented an electrostatic brake using thin metal plates across the hand that clamped together when a voltage 
+            was applied. These metal plates restricted the hand from closing completely when grabbing objects in the virtual world, like how an object you grab in 
+            the real world applies a force back on your hand keeping your hand from closing completely. These two technologies combined allowed us to deliver realistic 
             haptic feedback at a lower price point and lighter weight than more involved systems that require servos. The idea behind this design came out of a lab at 
-            Carnegie Mellon, however our novel material selection for the dielectric and coating enables us to make the design commercially viable and consumer friendly
+            Carnegie Mellon, however, our novel material selection for the dielectric and coating enabled us to make the design commercially viable and consumer friendly
              by delivering the same lab performance with safe power limits.          
           </p>
           <p>
             <b>Hardware Design</b> <br>
-            Our final haptic glove integrates two types of haptic feedback: tactile feedback and structural force feedback. We implement tactile feedback using 
+            Our final haptic glove integrated two types of haptic feedback: tactile feedback and structural force feedback. We implemented tactile feedback using 
             piezoelectric actuators, or simply put, vibration motors. Tactile feedback is the light sensation of touch, similar to touching a tabletop or pushing a 
-            button. As shown on the right in Figure 01, the vibration motors are placed at the users fingertips and would be activated when the user touches a virtual 
+            button. As shown below in Figure 01, the vibration motors are placed at the users fingertips and would be activated when the user touches a virtual 
             object. Structural feedback is the sensation of gripping an object and feeling the force resist your hands/fingers from moving completely freely, such as 
-            gripping a pencil, water bottle, ball or any other object. We accomplish structural force feedback through the innovation of the electrostatic clutch. When 
+            gripping a pencil, water bottle, ball or any other object. We accomplished structural force feedback through the innovation of the electrostatic clutch. When 
             activated, the clutch restricts the user from further closing their grip. Even though Figure 01 only displays the clutch on a single finger, the final 
             product would include a clutch on each finger, restricting movement in five DOF (degrees of freedom).           
           </p>
@@ -144,9 +144,9 @@
           </div>
           <p> </p>
           <p>
-            Finally, both of these haptic systems are integrated in the software such that the piezoelectric actuators are activated for 300 milliseconds each time a 
+            Finally, both of these haptic systems were integrated in the software such that the piezoelectric actuators were activated for 300 milliseconds each time a 
             finger collides with an object in the virtual world. The piezoelectric actuators have a very low latency. Hence, by activating them first for a short 
-            duration, before the clutch is able to fully engage, we are able to reduce latency and ensure immersion.
+            duration, before the clutch is able to fully engage, we were able to reduce latency and ensure immersion.
           </p>
             <b>Software Design</b> <br>
             There were two elements of the software stack we needed to pursue: 1) processing signals within the Oculus environment to see when the hand needed to 
